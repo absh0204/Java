@@ -1,0 +1,158 @@
+           object oriented programming
+
+not every data is sharable a user must ask for it and if it is suitable to share then
+we can share it
+To control then accessbility of data we use access modifiers.
+
+Encapsulation can be obtained by writing private before varaibles.
+in encapsulation the variable or data of the class is hidden. public Methods of that
+class is used to access variables , direct access is restricted.
+
+
+the data hiding concept which is achieved by making the members or methods of a class private,
+and the class is exposed to the end-user or the world without providing any details behind implementation 
+using the abstraction concept, so it is also known as a combination of data-hiding and abstraction
+
+
+                    (this keyword)
+
+preference is given to local variable rather than instance variable if name matches
+hence (this) keyword is used to access only thaat classes' instance variable
+
+
+
+                      constructor :
+looks like method but with no return type.
+it used to initialize instance varible for a particular object created.
+
+constructor is called default. Even if its not created jvm creates it and execute it
+constructor's name is same as class name.
+Constructor overloading is allowed i.e constructor with different parameters.Once constructor created jvm onlytakes 
+into consideration the created ones.
+
+        ANONYMOUS OBJECT ARE THOSE OBJECTS which don't have a reference in the stack or say no name given
+        like: new A();
+
+
+
+                                DYNAMIC DISPATCH Methods
+        in dynamic dispatch method we create a reference of parent class that points to 
+        object of concrete/subclass class
+
+        vice versa is not allowed as lamborgini can be referred as car but if we 
+        say car it doesnot mean lamborgini. as it is only one of many cars
+
+POLYMORPHIS (RUNTIME) EXAMPLE
+        // THIS IS CALLED DYNAMIC METHOD DISPATCH BECAUSE UNTILL IT RUNS WE DON'T KNOW WHICH METHOD 
+        IT WILL CALL
+        class A{
+                public void show(){
+                        sop("in a");
+                }
+        }
+        class B extends A{
+                public void show(){
+                        sop("in b");
+                }
+                
+        }
+        public class demo{
+                public static void main(String args[]){
+                        A ob=new B();//output
+                        ob.show;// in b
+                        ob=new A();//ALLOWED
+
+                        //upcasting: type casting subclass object to parent class
+                        A ob=new A();
+                        B ob1=new B();
+                        ob=(A)ob1;
+
+                        //downcasting /; type casting the parent class object with the subclass
+                        A ob=(A)new B();
+                       
+                        ob1=(A) ob;//generally reference type of ob is A so direct reference is not allowed but downcasting allows it
+
+                }
+        }
+
+-----------------------------------------------------------
+FINAL VARIABLE -constant
+Final class= Stops inheritance
+
+final method: No one can override parent method 
+// method overriding disallowed
+
+
+
+
+
+                        WRAPPER CLASS:it is called so because these classes are bound to a primitive type
+        these are the classes belonging to primitive data types
+
+        //autoboxing : when we assign the primitive type to the object automatically 
+        num=10;
+        Integer num1=num;
+
+        //auto unboxing :converting object value to primitive
+        int num2=num1;
+
+Inner Class:-
+- We can also create a class inside another class.
+ class A
+ { 
+  class B
+  {
+  }
+ }
+- You can call the method of class B by using the dot operator in between both classes A and B.
+A ob=new A();
+A.B obj= ob.new B();
+-  A dollar sign will be introduced in a class name that has an inner class indicating two different classes.
+ A$B. class
+- You also need to create an object of the outer class, to call the methods of an inner class.
+
+#2
+Static Inner Class:-(A.B =new A.B());
+- An inner class can also be declared as static.
+- When an inner class is declared as static, then you do not need to create an object for it.
+- But an outer class can not be made static.
+
+#3
+Advantage of inner class:-
+- Nested classes represent a particular type of relationship that is it can access all the members of the outer class, including private.
+- Nested classes make the code more readable and maintainable.
+- It makes the code more optimize.
+
+
+
+                        ANONYMOUS CLASS
+        class without name created in main method while creating object with the aim of providing a new implementation
+        #1
+- Anonymous means something that does not have a name.
+- In overriding, to provide a new implementation of a method, we need to create a new class and extend it with the parent class. After extending the class, we override the method.
+- We can avoid the overriding and do not need to create a new class for this particular task.
+- We can use the inner class concept to give a new implementation of a method.
+
+#2
+- We can create a new anonymous inner class after creating an object of a class that contains the method.
+- We do not need to use a class keyword with an anonymous inner class.
+- It just starts with braces and contains the method and its new implementation.
+- Anonymous inner class starts just the creation of an object and ends with the semicolon of that object.
+e.g., A obj=new A()
+  {
+   public void show()
+   {
+    new statement;
+   }
+  };
+
+#3
+- Anonymous class used in the interface, functional interface, lambda expressions.
+- Anonymous inner class can implement only one interface at s time.
+- It can either extend a class or implement an interface at a time.
+- We do not write a constructor for an anonymous inner class because it does not have any class name.
+- An anonymous class has access to the members of its enclosing class.
+
+
+
+

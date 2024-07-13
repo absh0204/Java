@@ -1,0 +1,42 @@
+        Variablerets in Java
+
+-A variable is a name assigned to a value that is stored inside the system memory. The value can be updated during the program execution.
+-There are basically three types of variables in Java,
+        -Java Local variable
+        -Java Instance variable
+        -Java Static variable / Java class variable
+-The variables that are declared inside the class but outside the scope of any method are called instance variables in Java.
+-The instance variable is initialized at the time of the class loading or when an object of the class is created.
+-An instance variable is destroyed when the object it is associated with is destroyed.
+
+
+
+                                        Local variables		
+Variables declared within a method are local variables.	
+The scope of the local variable is limited to the method it is declared inside.		
+A local variable starts its lifetime when the method is invoked.		
+Local variable is accessible to all the objects of the class.		
+Used to store values that are required for a particular method.	
+
+                                    Instance variables
+
+An instance variable is declared inside a class but outside of any method or block.	
+An instance variable is accessible throughout the class.
+The object associated with the instance variable decides its lifetime.
+Instance variable has different copies for different objects.
+Used to store values that are needed to be accessed by different methods of the class.
+
+
+                                    Static variables    
+Static variables are declared inside a class but outside of a method starting with a keyword static.
+The static variable is accessible throughout the class.
+Static variables only have one single copy of the entire class.
+The static variable has the same lifetime as the program.
+Used for storing constants.
+
+
+                """""""""""""""""""""""WHY MAIN IS Static""""""""""""""""""
+
+as the execution of the program in java is started from main as entry point hence in order to  start exection main needs to be executed first.
+So if main is not static we have to create a class object in which it is been declared which is not possible as under main
+itself object is created so ot will lead to a deadlock. hence main is made static.

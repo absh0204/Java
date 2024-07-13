@@ -1,0 +1,69 @@
+COLLECTION API(By default collection API works with objects so if 
+we use [Collection ar=new ArrayList(); it works but we can't access it by the for loop.
+
+so angular bracket can be used to specify particular wrapper class so that no error comes.
+ex: Collection<Integer>ar=new ArrayList<>();
+])
+
+- A framework is a set of classes and interfaces which provide a ready-made architecture.
+- Any group of individual objects which are represented as a single unit is known as the collection of the objects.
+- Collection is used to store multiple values.
+- Array is also used to store multiple values but it is not used in dynamic programming.
+- We use data structures to store and fetch the data.
+- Collection API is used in the java 1.2 version where you can work with all data structures by using some in-built classes.
+
+#2
+- We can use an array, where the length will be fixed. We cannot expand the size of an array.
+- Wherever we have a specific requirement for different algorithms and structures, we can use collection API.\
+
+
+API is used without implementation
+--------------------------------------------------------------------------------------------------
+#1
+The collection interface belongs to java.util.Collection package. All classes and methods of collection interface belong to this java.util package.
+- API means a library or some features that we can use directly, we do not need to define an implementation for it.
+- Collections List, Queue, Map and Set simply extend the Collection interface and this collection interface must have its own class implementation.
+- we can also convert a collection into an array.
+- ArrayList is used like:
+ Collection nums=new ArrayList(); 
+ nums.add(6);
+- We can add values in a collection by using the add() method.
+-- We do not have indexing for the collection API.
+- In the array, we need to specify its type of it. While Collection API works with objects.
+- All the data types classes like integer and float extend an object class and thus collection API directly use an object.
+
+#2
+- To define the data types in collection API, we use Generics.
+- You can define the type of an object to which data type class it belongs in angular brackets like:
+ Collection(Integer) nums= new ArrayList Integer ();
+- Here, we use Integer as it is a class, while int is a primitive data type.
+- If we do not specify the datatype of a collection object, then it will give a run-time error.
+
+#3
+- ArrayList is a class that implements a list. The list does not have a method called get because it list works with an index in the values.
+-  It uses a dynamic array to store the duplicate element of different data types. 
+- The ArrayList class maintains the insertion order and is non-synchronized. 
+- The elements stored in the ArrayList class can be randomly accessed. 
+- The size of an ArrayList is increased automatically if the collection grows or shrinks if the objects are removed from the collection. 
+- If you want to use and fetch values from an ArrayList, then you can use Collection.
+ Collection Integer nums= new ArrayList Integer ();
+- If you want to work with an index value, you should use List as it supports index values.
+ List Integer  nums= new ArrayList Integer ();
+
+#4 Advantages of Collection Framework:
+- Consistent API
+- Reduces programming efforts
+- Increases program speed and quality
+
+
+
+========================================*Important*=============================================
+*if* we use *Collection ar=new ArrayList();* to declare and insert different types of data types 
+it will work and can be directly printed with System.out.println() but for each loop will give error;
+
+*the important part is this whole process gives run time exception(ClassCastException) so in order to avoid it generics is used which is simple angular brackets"<>" to specify class type object we want to work with.*
+
+
+ArrayList is class in which implements List
+and list works with index so get method can be used only if in place of collections we have to use
+*List<>ar=new ArrayList<>();* to declare. Collection only works with fetching and inserting.
