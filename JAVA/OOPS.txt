@@ -89,11 +89,11 @@ final method: No one can override parent method
                         WRAPPER CLASS:it is called so because these classes are bound to a primitive type
         these are the classes belonging to primitive data types
 
-        //autoboxing : when we assign the primitive type to the object automatically 
+        //auto : when we assign the primitive type to the object automatically 
         num=10;
         Integer num1=num;
 
-        //auto unboxing :converting object value to primitive
+        //auto un :converting object value to primitive
         int num2=num1;
 
 Inner Class:-
