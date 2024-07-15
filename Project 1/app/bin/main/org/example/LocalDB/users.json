@@ -1,0 +1,30 @@
+[
+  {
+    "user_id": "12345",
+    "name": "Atul",
+    "hashedPassword": "abc12345",
+    "tickets_booked": [
+      {
+        "source": "Ghaziabad",
+        "destination": "Delhi",
+        "date_of_travel": "2024-12-08T18:30:00Z",
+        "train": {
+          "train_id": "alone",
+          "train_no": "221718",
+          "seats": [
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0]
+          ],
+          "stations": {
+            "Delhi":"08:00:00",
+            "Ghaziabad": "12:58:00",
+            "Lucknow": "09:00:00"
+
+          }
+        }
+      }
+    ]
+  }
+]
